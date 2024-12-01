@@ -12,7 +12,6 @@ const TagPage = () => {
   const { tag } = useParams<{ tag: string }>();
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
   const [columns, setColumns] = useState<1 | 3 | 5>(3);
 
   const handlePageClick = (event: any) => {
@@ -22,12 +21,11 @@ const TagPage = () => {
 
   const handleGetImagesByTag = async () => {
     setLoading(true);
-    setError("");
     try {
       const data = await useGetAllImagesByTag(page, tag);
       setImages(data.results);
     } catch (err) {
-      setError("Failed to fetch images. Please try again.");
+      console.log("Failed to fetch images. Please try again.");
     } finally {
       setLoading(false);
     }

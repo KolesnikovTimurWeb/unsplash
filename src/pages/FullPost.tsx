@@ -12,15 +12,13 @@ const FullPost = () => {
   const { id } = useParams<{ id: string }>();
   const [image, setImage] = useState<any>();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
   const handleGetImage = async () => {
     setLoading(true);
-    setError("");
     try {
       const data = await useGetImageById(id || null);
       setImage(data);
     } catch (err) {
-      setError("Failed to fetch images. Please try again.");
+      console.log("Failed to fetch images. Please try again.");
     } finally {
       setLoading(false);
     }

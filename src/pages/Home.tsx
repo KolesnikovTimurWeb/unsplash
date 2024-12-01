@@ -17,7 +17,6 @@ const Home = () => {
   const [images, setImages] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
   const [columns, setColumns] = useState<1 | 3 | 5>(3);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
@@ -30,13 +29,12 @@ const Home = () => {
 
   const fetchImages = async () => {
     setLoading(true);
-    setError("");
     try {
       const data = await useGetAllImages(page);
       console.log(data);
       setImages(data);
     } catch (err) {
-      setError("Failed to fetch images. Please try again.");
+      console.log("Failed to fetch images. Please try again.");
     } finally {
       setLoading(false);
     }
