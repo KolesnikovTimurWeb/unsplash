@@ -1,0 +1,149 @@
+.home {
+  &_heading {
+    margin: 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+
+    &_grid_buttons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      button {
+        background: transparent;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border-radius: 8px;
+        background: #ededed;
+        padding: 10px;
+        font-weight: 500;
+      }
+    }
+  }
+  &_search {
+    margin: 20px 0;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    background-color: #eee;
+    box-shadow: 0 0 0 1px #eee;
+    margin-left: 30px;
+    transition: all 0.1s ease-in-out;
+    color: #111;
+    flex-grow: 1;
+    width: 100%;
+    border-radius: 24px;
+    height: 30px;
+    font-size: 14px;
+    padding: 4px;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      display: flex;
+      background: none;
+      width: 100%;
+
+      padding-left: 10px;
+    }
+  }
+  &_images_1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Responsive columns */
+    gap: 8px;
+    align-items: center;
+    img {
+      width: 100%;
+      height: auto; /* Keeps aspect ratio */
+      display: block;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+  &_images_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Responsive columns */
+    gap: 16px;
+    align-items: center;
+    img {
+      width: 100%;
+      height: auto; /* Keeps aspect ratio */
+      display: block;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+  &_images_5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Responsive columns */
+    gap: 16px;
+    align-items: center;
+    img {
+      width: 100%;
+      height: auto; /* Keeps aspect ratio */
+      display: block;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        transform: scale(0.95);
+      }
+    }
+  }
+  &_pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    ul {
+      display: flex;
+      gap: 10px;
+    }
+    a {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    li {
+      padding: 0 4px;
+      opacity: 0.4;
+      height: 25px;
+      font-weight: 100;
+      width: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 1px solid #767676;
+    }
+
+    @media screen and (max-width: 768px) {
+      a {
+        font-size: 14px;
+      }
+
+      li {
+        padding: 0 4px;
+        opacity: 0.4;
+        height: 20px;
+        font-weight: 100;
+        width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        cursor: pointer;
+        border: 1px solid #767676;
+      }
+    }
+  }
+}
