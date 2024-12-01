@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/Header.module.scss";
 import logo from "../assets/logo.svg";
 import { Menu, Search } from "lucide-react";
-import { useSearchImages } from "../hooks/hooks";
 import { Link, useNavigate } from "react-router-dom";
 const Header = () => {
   const [query, setQuery] = useState("");

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useGetAllImagesByTag } from "../hooks/hooks";
 import { Link, useParams } from "react-router-dom";
 import styles from "../styles/Tag.module.scss";

@@ -1,6 +1,5 @@
-import axios from "axios";
 import { instance } from "../api/instance";
-import { useNavigate, useRoutes } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const useGetAllImages = async (page: number) => {
   const res = await instance

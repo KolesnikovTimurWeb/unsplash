@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useGetImageById } from "../hooks/hooks";
 import styles from "../styles/FullPost.module.scss";
